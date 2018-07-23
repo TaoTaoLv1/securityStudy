@@ -11,5 +11,17 @@
 
     <artifactId>security-browser</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ywt</groupId>
+            <artifactId>security-core</artifactId>
+            <version>${security.version}</version>
+        </dependency>
 
+        <!--集群 session 管理-->
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session</artifactId>
+        </dependency>
+    </dependencies>
 </project>
