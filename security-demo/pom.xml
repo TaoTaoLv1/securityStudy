@@ -11,5 +11,12 @@
 
     <artifactId>security-demo</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ywt</groupId>
+            <artifactId>security-browser</artifactId>
+            <version>${security.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
