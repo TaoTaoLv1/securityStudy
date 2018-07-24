@@ -17,7 +17,6 @@
             <groupId>org.springframework.security.oauth</groupId>
             <artifactId>spring-security-oauth2</artifactId>
         </dependency>
-
         <!--         end          -->
 
         <!--数据库相关-->
@@ -36,6 +35,18 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <!--         end          -->
+
+        <!-- web 相关-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
 
         <!-- 第三方登陆依赖-->
