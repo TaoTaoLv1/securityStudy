@@ -2,6 +2,8 @@ package com.ywt.com.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
+import javax.validation.constraints.NotBlank;
+
 public class User {
 
     public interface UserSimpleView {};
@@ -11,6 +13,7 @@ public class User {
 
     private String username;
 
+    @NotBlank
     private String password;
 
     public User(String id, String username, String password) {
