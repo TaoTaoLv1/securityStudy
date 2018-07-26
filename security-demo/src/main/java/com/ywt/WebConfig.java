@@ -1,15 +1,31 @@
 package com.ywt;
 
 import com.ywt.com.web.filter.TimeFilter;
+import com.ywt.com.web.interceptor.TimeInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  extends WebMvcConfigurationSupport
+ *      addInterceptors 配置拦截器
+ */
 @Configuration
-public class Webconfig {
+public class WebConfig extends WebMvcConfigurationSupport {
+
+    @Autowired
+    private TimeInterceptor timeInterceptor;
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(timeInterceptor);
+    }
 
     @Bean
     public FilterRegistrationBean timeFilter(){
