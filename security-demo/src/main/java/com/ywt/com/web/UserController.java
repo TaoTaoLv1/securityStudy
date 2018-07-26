@@ -2,11 +2,7 @@ package com.ywt.com.web;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.ywt.com.entity.User;
-import org.springframework.security.core.parameters.P;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +21,7 @@ public class UserController {
         return users;
     }
 
-    @GetMapping(value = "get/{id}")
+    @PostMapping(value = "get/{id}")
     @JsonView(User.UserDetailView.class)
     public User getInfo(@PathVariable String id){
         User user = new User("1","aa","1234");
