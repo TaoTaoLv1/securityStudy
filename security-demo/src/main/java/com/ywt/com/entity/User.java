@@ -1,6 +1,7 @@
 package com.ywt.com.entity;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotBlank;
 
@@ -11,6 +12,7 @@ public class User {
 
     private String id;
 
+    @ApiModelProperty(value = "用户姓名")
     private String username;
 
     @NotBlank
